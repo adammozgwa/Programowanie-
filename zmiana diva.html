@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color: azure;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="zmien1()">1</button>
+    <button onclick="zmien2()">2</button>
+    <button onclick="zmien3()">3</button>
+
+    <div id="divjeden">
+        1
+    </div>
+
+    <div id="divdwa">
+        2
+    </div>
+
+    <div id="divtrzy ">
+        3
+    </div>
+    <script>
+    
+
+        
+
+     function zmien1(){
+        document.getElementById("divjeden").style.display="none"                      
+        document.getElementById("divdwa").style.display="block"                                               
+        document.getElementById("divtrzy").style.display="block"
+     }
+
+     function zmien2(){
+        document.getElementById("divjeden").style.display="block"                      
+        document.getElementById("divdwa").style.display="none"                                               
+        document.getElementById("divtrzy").style.display="block"
+     }
+
+     function zmien3(){
+        document.getElementById("divjeden").style.display="block"                      
+        document.getElementById("divdwa").style.display="block"                                               
+        document.getElementById("divtrzy").style.display="none"
+     }
+            
+        
+    </script>
+</body>
+</html>

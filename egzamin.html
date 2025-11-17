@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="plik" accept="image/jpeg" />   
+     <p>podaj liczbe Kopii</p>
+    <input type="number" id="liczba"><br>
+    <h3>    wybierz papier:
+    </h3>
+    <input type="radio" name="a" id="mat"><label for="">matowy </label><br>
+    <input type="radio" name="a" id="bly"><label for="">błyszczący</label><br>
+    
+    <button id="btn">dodaj do koszyka </button>
+
+    <div id="koszyk">
+
+    </div>
+
+<script>
+ document.getElementById("btn").addEventListener("click",function(){
+    let zdj = document.createElement("img")
+    zdj.src = URL.createObjectURL(document.getElementById("plik").files[0])
+    let koszyk = document.getElementById("koszyk")
+    koszyk.appendChild(zdj)
+ })
+</script>
+</body>
+</html>

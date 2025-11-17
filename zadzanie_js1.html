@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Szerokość pomieszczenia <input type="number" id="szer">
+    Długość pomieszczenia [m]: <input type="number" id="dlu"><br><br>
+    <input type="radio" name="a" id="c12" value="12">Panele laminowane<br>
+    <input type="radio" name="a" id="c14" value="14">Panele winylowe<br>
+    <input type="radio" name="a" id="c18" value="18">Deska podłogowa<br>
+    <button id="btn" onclick="oblicz()">Oblicz</button>
+    <p id="text"></p>
+
+    <script>
+        function oblicz(){
+            let szer = document.getElementById("szer").value
+            let dlu = document.getElementById("dlu").value
+            let pan = document.querySelector("input[name=a]:checked").value
+            let p = document.getElementById("text")
+
+            let pole = szer * dlu
+            console.log = pole
+            let cena = pole * pan
+            document.write = pole
+            
+            p.innerHTML= cena
+        }
+    </script>
+</body>
+</html>
